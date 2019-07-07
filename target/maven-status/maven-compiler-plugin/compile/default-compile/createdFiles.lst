@@ -1,0 +1,4 @@
+com\hexad\shall\bakery\application\Bakery.class
+com\hexad\shall\bakery\service\PackageService.class
+com\hexad\shall\bakery\model\OrderLine.class
+com\hexad\shall\bakery\model\OrderPack.class

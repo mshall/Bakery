@@ -21,7 +21,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.hexad.shall.bakery.application.OrderProcessor</mainClass>
+							<mainClass>com.hexad.shall.bakery.application.Bakery</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
