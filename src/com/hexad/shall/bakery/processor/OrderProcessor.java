@@ -16,7 +16,13 @@ public class OrderProcessor {
 
 	static PackageService packageService = new PackageService();
 
+	/**
+	 * This method is responsible for Reading orders from the user
+	 * 
+	 * @returns Map<String, Integer> orders
+	 */
 	public static Map<String, Integer> readOrders() {
+
 		System.out.println("********************************");
 		System.out.println("Please enter desired orders, a product each line!");
 		Map<String, Integer> ordersMap = new HashMap<String, Integer>();
@@ -39,6 +45,12 @@ public class OrderProcessor {
 		return ordersMap;
 	}
 
+	/**
+	 * This method is responsible for Processing the order after getting the order
+	 * from the user
+	 *
+	 * @param orders - Map of orders received from the user
+	 */
 	public static void processOrders(Map<String, Integer> orders) {
 		int grandTotalItems = 0;
 		double grandTotalPrice = 0.0;
@@ -77,28 +89,13 @@ public class OrderProcessor {
 		}
 	}
 
-	public static List<Integer> getPackageSizesForAProduct(String productCode) {
-		List<Integer> packageSizes = new ArrayList<>();
-		switch (productCode) {
-		case "VS5":
-			packageSizes.add(5);
-			packageSizes.add(3);
-			break;
-		case "MB11":
-			packageSizes.add(8);
-			packageSizes.add(5);
-			packageSizes.add(2);
-			break;
-		case "CF":
-			packageSizes.add(9);
-			packageSizes.add(5);
-			packageSizes.add(3);
-			break;
-
-		}
-		return packageSizes;
-	}
-
+	/**
+	 * This method is responsible for Fetching available packages for a specific
+	 * product
+	 *
+	 * @param productCode - This is the unique identifier for a product
+	 * @returns List<OrderPack> - available product packages
+	 */
 	public static List<OrderPack> getPackagesForProduct(String productCode) {
 		List<OrderPack> packsList = new ArrayList<>();
 		switch (productCode) {

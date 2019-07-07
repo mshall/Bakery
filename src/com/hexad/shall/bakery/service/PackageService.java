@@ -9,11 +9,12 @@ import com.hexad.shall.bakery.model.OrderPack;
 public class PackageService {
 
 	/**
-	 * Calculate packages required for order
+	 * This method is responsible for
+	 * Calculating required packages per order
 	 *
-	 * @param packages - permissible packages for given product
-	 * @param quantity - number of individual items for given product
-	 * @returns {OrderLine}
+	 * @param packages - number of packages for given product
+	 * @param quantity - number of  items for given product
+	 * @returns OrderLine
 	 */
 	public OrderLine calculatePackages(List<OrderPack> packages, int quantity) {
 
